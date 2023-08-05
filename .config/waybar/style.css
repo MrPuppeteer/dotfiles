@@ -1,0 +1,206 @@
+@import 'mocha.css';
+
+/* =============================== */
+/* Universal Styling */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: 'FiraCode Nerd Font';
+  font-size: 15px;
+  min-height: 0;
+}
+/* =============================== */
+
+/* =============================== */
+/* Bar Styling */
+#waybar {
+  background: rgba(17, 17, 27, 0.8);
+  /* background: transparent; */
+  color: @text;
+  margin: 8px 0;
+}
+/* =============================== */
+
+/* =============================== */
+/* Workspaces */
+#workspaces {
+  margin: 8px 0;
+  /*background-color: @surface0;*/
+}
+
+#workspaces button {
+  background-color: @base;
+  color: @mauve;
+  transition: all 0.5s cubic-bezier(0.33, 1, 0.68, 1); /* easeInOutCubic */
+}
+
+#workspaces button.active {
+  color: @lavender;
+}
+
+#workspaces button:hover {
+  color: @lavender;
+  /* border-radius: 1rem; */
+}
+#custom-border_right {
+  background-color: @base;
+  color: @text;
+  border-radius: 0rem 1rem 1rem 0rem;
+  /* padding: 0rem 0.4rem; */
+  margin: 8px 0;
+  margin-right: 0.5rem;
+  padding-right: 0.4rem;
+}
+#custom-border_left {
+  background-color: @base;
+  color: @text;
+  border-radius: 1rem 0rem 0rem 1rem;
+  /* padding: 0rem 0.4rem; */
+  margin: 8px 0;
+  margin-left: 0.5rem;
+  padding-left: 0.4rem;
+}
+#custom-music_toggle {
+  background-color: @base;
+  /*color: @text;*/
+  color: @lavender;
+  font-size: 20px;
+  margin: 8px 0;
+}
+#custom-music_next,
+#custom-music_prev {
+  background-color: @base;
+  /*color: @text;*/
+  color: @blue;
+  font-size: 20px;
+  margin: 8px 0;
+}
+/* =============================== */
+
+/* =============================== */
+/* Main Modules */
+#window,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#custom-music,
+#custom-launcher,
+#custom-power,
+#custom-weather {
+  background-color: @base;
+  color: @text;
+  /* border-radius: 1rem; */
+  padding: 0.25rem 0.75rem;
+  margin: 8px 0;
+}
+/* =============================== */
+
+/* =============================== */
+/* System Monitoring Modules */
+#cpu,
+#memory,
+#temperature {
+  color: @blue;
+}
+
+#disk {
+  color: @maroon;
+}
+/* =============================== */
+
+/* =============================== */
+/* Clock Module */
+#clock {
+  color: @maroon;
+}
+/* =============================== */
+
+/* =============================== */
+/* Battery Module */
+#battery {
+  color: @green;
+}
+#battery.charging {
+  color: @green;
+}
+#battery.warning:not(.charging) {
+  color: @maroon;
+}
+#battery.critical:not(.charging) {
+  color: @red;
+}
+/* =============================== */
+
+/* =============================== */
+/* Backlight Module */
+#backlight {
+  color: @teal;
+  padding-right: 1.25rem;
+}
+/* =============================== */
+
+/* =============================== */
+/* Network Module */
+#network {
+  color: @blue;
+  padding-right: 1.25rem;
+}
+/* =============================== */
+
+/* =============================== */
+/* PulseAudio Module */
+#pulseaudio {
+  color: @mauve;
+  padding-right: 1.25rem;
+}
+/* =============================== */
+
+/* =============================== */
+/* Window Module */
+
+/* #window { */
+/* border-radius: 1rem; */
+/* margin-right: 1rem; */
+/* } */
+
+/* =============================== */
+
+/* =============================== */
+/* |       Custom Modules        | */
+/* =============================== */
+
+/* Music/PlayerCTL Module */
+#custom-music {
+  color: @mauve;
+  padding: 0.25rem 0;
+  /* border-radius: 1rem; */
+  /* margin-right: 1rem; */
+}
+
+/* Launcher Module */
+#custom-launcher {
+  color: @mauve;
+  /* border-radius: 1rem; */
+}
+
+/* Powermenu Module */
+#custom-power {
+  color: @mauve;
+}
+
+/* tray Module */
+#tray {
+  border-radius: 1rem;
+  padding: 0.25rem 1.25rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* =============================== */

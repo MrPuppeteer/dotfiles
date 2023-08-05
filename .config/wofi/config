@@ -1,0 +1,4 @@
+allow_images=true
+width=25%
+hide_scroll=true
+term=kitty
