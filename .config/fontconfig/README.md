@@ -2,10 +2,10 @@
 
 ## Usage
 
-1. Install IBM Plex, Fira Code, Symbola and Noto Color Emoji (for Emoji and Symbols support).
+1. Install IBM Plex, Fira Code, Symbola (ttf-ancient-fonts) and Noto Color Emoji (for Emoji and Symbols support).
 
 ```bash
-emerge -avN media-fonts/ibm-plex media-fonts/fira-code media-fonts/noto-emoji media-fonts/symbola
+emerge -avN media-fonts/ibm-plex media-fonts/fira-code media-fonts/noto-emoji media-fonts/ttf-ancient-fonts
 ```
 
 2. Install FiraCode Nerd Font characters

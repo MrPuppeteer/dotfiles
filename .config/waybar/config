@@ -8,15 +8,15 @@
 
     // Choose the order of the modules
     "modules-left": [
-        "custom/border_left",
+        // "custom/border_left",
         "custom/launcher",
-        "wlr/workspaces", 
+        "hyprland/workspaces", 
         "cpu", 
         "memory", 
         "temperature", 
         "disk", 
         // "custom/weather", 
-        "custom/border_right",
+        // "custom/border_right",
 
         "custom/border_left",
         "custom/music_prev",
@@ -26,24 +26,24 @@
         "custom/border_right"
     ],
     "modules-center": [
-        "custom/border_left",
-        "hyprland/window",
-        "custom/border_right"
+        // "custom/border_left",
+        "hyprland/window"
+        // "custom/border_right"
      ],
     "modules-right": [ 
         "tray",
 
-        "custom/border_left",
+        // "custom/border_left",
         "pulseaudio", 
         "network", 
         "backlight", 
         "battery", 
-        "clock",
-        "custom/border_right"
+        "clock"
+        // "custom/border_right"
     ],
     
     // Modules configuration
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
         "format": "{icon} {name}",
         "format-icons": {
           "active": "󰐾",
@@ -79,7 +79,8 @@
         "escape": true,
         "interval": 1,
         "tooltip": true,
-        "exec": "playerctl metadata --format='{{ title }} | {{ artist }}' 2> /dev/null || echo No Media Found",
+        // "exec": "playerctl metadata --format='{{ default(title,uc(playerName)) }} | {{ default(artist,status) }}' 2> /dev/null || echo No Media Found",
+        "exec": "playerctl metadata --format='{{ default(title,playerName) }}' 2> /dev/null",
         // "exec": "playerctl metadata --format='{{ title }} | {{ artist }}'",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl next",
@@ -88,15 +89,15 @@
     },
     "custom/music_prev": {
       "format": "󰒮 ",
-      "escape": true,
       "interval": 1,
-      "exec": "playerctl metadata --format='{{ title }} | {{ artist }}'",
+      "tooltip": false,
+      "exec": "playerctl metadata 2> /dev/null",
       "on-click": "playerctl previous"
     },
     "custom/music_toggle": {
         "format": "{icon}",
         "return-type": "json",
-        "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}}: {{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+        "exec": "playerctl -a metadata --format '{\"text\": \"{{playerName}} : {{artist}} - {{markup_escape(default(title, \"\"))}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(default(title,\"\"))}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F 2> /dev/null",
         // "exec": "playerctl status -F",
         // "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null",
         "format-icons": {
@@ -108,9 +109,9 @@
     },
     "custom/music_next": {
       "format": "󰒭 ",
-      "escape": true,
       "interval": 1,
-      "exec": "playerctl metadata --format='{{ title }} | {{ artist }}'",
+      "tooltip": false,
+      "exec": "playerctl metadata 2> /dev/null",
       "on-click": "playerctl next"
     },
     "custom/launcher": {
@@ -125,7 +126,7 @@
           "": "Hyprland"
         },
         // "separate-outputs": true,
-        "max-length": 30
+        "max-length": 60
     },
     "idle_inhibitor": {
         "format": "{icon}",

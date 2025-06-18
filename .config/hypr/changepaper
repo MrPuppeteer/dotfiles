@@ -1,0 +1,40 @@
+#!/bin/bash
+
+previous_wallpaper="~/.config/hypr/GlrEeNYbIAAqOpf.png"
+
+while true; do
+    sleep 1800
+
+    wallpapers=(
+        ~/.config/hypr/GlrEeNYbIAAqOpf.png # 80%
+        ~/.config/hypr/videoframe_99710.png # 10%
+        ~/.config/hypr/videoframe_206656.png # 10%
+    )
+
+    random_choice=$(( ( RANDOM % 10 ) + 1 ))
+
+    if [ "$random_choice" -le 8 ]; then
+        selected_wallpaper="${wallpapers[0]}"
+    elif [ "$random_choice" -eq 9 ]; then
+        selected_wallpaper="${wallpapers[1]}"
+    else
+        selected_wallpaper="${wallpapers[2]}"
+    fi
+
+    if [ "$selected_wallpaper" != "$previous_wallpaper" ]; then
+
+        eval expanded_selected_wallpaper="$selected_wallpaper"
+        eval expanded_previous_wallpaper="$previous_wallpaper"
+
+        if [ -f "$expanded_selected_wallpaper" ]; then
+
+            hyprctl hyprpaper preload "$expanded_selected_wallpaper"
+
+            hyprctl hyprpaper wallpaper "eDP-1, $expanded_selected_wallpaper"
+
+            hyprctl hyprpaper unload "$expanded_previous_wallpaper"
+
+            previous_wallpaper="$selected_wallpaper"
+        fi
+    fi
+done

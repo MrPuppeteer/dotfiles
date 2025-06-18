@@ -37,6 +37,10 @@ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fi
 
 Note: read [awsm.fish](https://github.com/jorgebucaran/awsm.fish)
 
+## Functions
+
+1. Copy all files inside `/functions` into `~/.config/fish/functions`
+
 ## Reference
 
 1. https://wiki.gentoo.org/wiki/Fish

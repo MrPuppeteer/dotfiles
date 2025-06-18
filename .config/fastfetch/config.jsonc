@@ -1,0 +1,68 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "~/.config/fastfetch/nijika.png",
+    "width": 40
+  },
+  "display": {
+    "separator": " ",
+    "key": {
+      "width": 4,
+      "type": "icon"
+    },
+    "color": {
+      "keys": "blue",
+      "title": "red"
+    }
+  },
+  "modules": [
+    "title",
+    "separator",
+    {
+      "type": "os",
+      "keyIcon": ""
+    },
+    {
+      "type": "host",
+      "keyIcon": "",
+      "format": "{2} {1}"
+    },
+    {
+      "type": "kernel",
+      "keyIcon": "",
+      "format": "{1} {2}"
+    },
+    "uptime",
+    {
+      "type": "packages",
+      "keyIcon": ""
+    },
+    {
+      "type": "shell",
+      "keyIcon": ""
+    },
+    {
+      "type": "editor",
+      "keyIcon": ""
+    },
+    "display",
+    "wm",
+    {
+      "type": "terminal",
+      "keyIcon": ""
+    },
+    "cpu",
+    "gpu",
+    {
+      "type": "memory",
+      "keyIcon": ""
+    },
+    "disk",
+    {
+      "type": "media",
+      "format": "{3} - {2}"
+    },
+    "player"
+  ]
+}

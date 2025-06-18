@@ -1,7 +1,7 @@
 # [Hyprland](https://github.com/hyprwm/Hyprland)
 
 1. Read the [tutorial](https://wiki.hyprland.org/Getting-Started/Master-Tutorial/)
-2. Copy `hyprland.conf`, `hyprpaper.conf`, and `xdg-portal-hyprland` to `~/.config/hypr/`
+2. Copy files to `~/.config/hypr/`
 
 ## References
 

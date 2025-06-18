@@ -24,9 +24,9 @@ There are two ways to get the theme working.
 
 1. Add the following to bat's configuration file:
    ```bash
-   --theme="Catppuccin-mocha"
+   --theme="Catppuccin Mmocha"
    ```
 2. Using the `BAT_THEME` environmental variable:
-   - Export the environmental variable inside your shell's configuration file: `BAT_THEME="Catppuccin-mocha"`. The method to export the variable depends on your shell.
+   - Export the environmental variable inside your shell's configuration file: `BAT_THEME="Catppuccin Mocha"`. The method to export the variable depends on your shell.
 
 Note: to generate bat's configuration file run: `bat --generate-config-file`

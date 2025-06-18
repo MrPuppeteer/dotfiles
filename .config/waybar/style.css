@@ -7,6 +7,7 @@
   border-radius: 0;
   font-family: 'FiraCode Nerd Font';
   font-size: 15px;
+  /* font-size: 12px; */
   min-height: 0;
 }
 /* =============================== */
@@ -14,18 +15,19 @@
 /* =============================== */
 /* Bar Styling */
 #waybar {
-  background: rgba(17, 17, 27, 0.8);
+  /* background: rgba(17, 17, 27, 0.8); */
   /* background: transparent; */
+  background: @base;
   color: @text;
-  margin: 8px 0;
+  /* margin: 8px 0; */
 }
 /* =============================== */
 
 /* =============================== */
 /* Workspaces */
 #workspaces {
-  margin: 8px 0;
-  /*background-color: @surface0;*/
+  /* margin: 8px 0; */
+  background-color: @surface0;
 }
 
 #workspaces button {
@@ -47,7 +49,7 @@
   color: @text;
   border-radius: 0rem 1rem 1rem 0rem;
   /* padding: 0rem 0.4rem; */
-  margin: 8px 0;
+  /* margin: 8px 0; */
   margin-right: 0.5rem;
   padding-right: 0.4rem;
 }
@@ -56,7 +58,7 @@
   color: @text;
   border-radius: 1rem 0rem 0rem 1rem;
   /* padding: 0rem 0.4rem; */
-  margin: 8px 0;
+  /* margin: 8px 0; */
   margin-left: 0.5rem;
   padding-left: 0.4rem;
 }
@@ -65,7 +67,7 @@
   /*color: @text;*/
   color: @lavender;
   font-size: 20px;
-  margin: 8px 0;
+  /* margin: 8px 0; */
 }
 #custom-music_next,
 #custom-music_prev {
@@ -73,7 +75,7 @@
   /*color: @text;*/
   color: @blue;
   font-size: 20px;
-  margin: 8px 0;
+  /* margin: 8px 0; */
 }
 /* =============================== */
 
@@ -98,7 +100,7 @@
   color: @text;
   /* border-radius: 1rem; */
   padding: 0.25rem 0.75rem;
-  margin: 8px 0;
+  /* margin: 8px 0; */
 }
 /* =============================== */
 
@@ -198,7 +200,7 @@
 /* tray Module */
 #tray {
   border-radius: 1rem;
-  padding: 0.25rem 1.25rem;
+  /* padding: 0.25rem 1.25rem; */
   margin-right: 0.5rem;
   margin-left: 0.5rem;
 }
